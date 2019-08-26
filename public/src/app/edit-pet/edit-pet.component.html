@@ -1,0 +1,34 @@
+<div class = "container">
+    <h1>Pet Shelter</h1>
+    <h2>Edit this Pet</h2>
+    
+    <form (submit)="updatePet()">
+      <div class="form-group">
+        <label for="petname">Pet name:</label>
+        <input type="text" class="form-control" name = "pet_to_edit.name" [(ngModel)]="pet_to_edit.name">
+      </div>
+      <div class="form-group">
+        <label for="pettype">Pet type:</label>
+        <input type="text" class="form-control" name="pet_to_edit.type" [(ngModel)]="pet_to_edit.type">
+      </div>
+      <div class="form-group">
+        <label for="petdesc">Pet description:</label>
+        <input type="text" class="form-control" name="pet_to_edit.description" [(ngModel)]="pet_to_edit.description">
+      </div>
+      <div class="form-group">
+        <label for="skill1">Skill 1:</label>
+        <input type="text" class="form-control" name="pet_to_edit.skills[0]" [(ngModel)]="pet_to_edit.skills[0]">
+      </div>
+      <div class="form-group">
+        <label for="skill2">Skill 2:</label>
+        <input type="text" class="form-control" name="pet_to_edit.skills[1]" [(ngModel)]="pet_to_edit.skills[1]">
+      </div>
+      <div class="form-group">
+        <label for="skill3">Skill 3:</label>
+        <input type="text" class="form-control" name="pet_to_edit.skills[2]" [(ngModel)]="pet_to_edit.skills[2]">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br>
+    <button class="btn btn-primary" [routerLink]="['/pets']">Cancel</button>
+    </div>

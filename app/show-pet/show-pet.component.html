@@ -1,0 +1,20 @@
+<div class = "container">
+<div class = "row">
+  <div class = "col-4">
+      <h1>Pet Shelter</h1>
+  </div>
+  <div class = "col-4"></div>
+  <div class = "col-4">
+      <button class="btn btn-primary" [routerLink]="['/pets']">Home</button>
+  </div>
+  
+</div><!--end row-->
+
+<h2>Details about: {{pet_to_show.name}}</h2>
+<h2>Pet type:</h2> <p>{{pet_to_show.type}}</p>
+<h2>Description:</h2> <p>{{pet_to_show.description}}</p>
+<h2>Skills:</h2> <p>{{pet_to_show.skills[0]}}, {{pet_to_show.skills[1]}}, {{pet_to_show.skills[2]}}</p>
+<h2>Likes: </h2>
+<button class = "btn btn-primary">Like this pet!</button> | <button class = "btn btn-primary" (click) = "deletePet(pet_to_show._id)">Adopt this pet!</button>
+
+</div><!--end container-->

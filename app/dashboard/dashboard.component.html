@@ -1,0 +1,25 @@
+<div class = "container">
+<h1>Thank you for everything Nate! :) - Ivan</h1>
+<h1>Pet Shelter</h1>
+<h2>These pets are looking for a home!</h2>
+<a [routerLink]="['/pets/new']">Add a pet to the shelter</a>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let p of pets">
+      <th scope="row">{{p.name}}</th>
+      <td>{{p.type}}</td>
+      <td><button [routerLink]= "['/pets', p._id]" >Details</button> | <button [routerLink]="['/pets',p._id, 'edit']">Edit</button></td>
+    </tr>
+              <!--[routerLink]="['user', user.id, 'details']"-->
+  </tbody>
+</table>
+
+</div>
